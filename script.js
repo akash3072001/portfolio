@@ -1,0 +1,1 @@
+// JS not needed in minimalist version
