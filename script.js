@@ -1,24 +1,15 @@
-// Smooth scrolling for navigation links
-document.querySelectorAll('nav a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
+// Theme Toggle
+const themeToggle = document.getElementById('theme-toggle');
+const body = document.body;
+
+themeToggle.addEventListener('click', () => {
+    body.setAttribute('data-theme', 
+        body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'
+    );
+    themeToggle.innerHTML = body.getAttribute('data-theme') === 'dark' 
+        ? '<i class="fas fa-sun"></i>' 
+        : '<i class="fas fa-moon"></i>';
 });
 
-// Dark Mode Toggle
-const darkModeToggle = document.createElement('button');
-darkModeToggle.textContent = '🌓 Toggle Dark Mode';
-darkModeToggle.style.position = 'fixed';
-darkModeToggle.style.bottom = '20px';
-darkModeToggle.style.right = '20px';
-darkModeToggle.style.padding = '10px';
-darkModeToggle.style.borderRadius = '5px';
-darkModeToggle.style.cursor = 'pointer';
-document.body.appendChild(darkModeToggle);
-
-darkModeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-});
+// Set initial theme (light)
+body.setAttribute('data-theme', 'light');

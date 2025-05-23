@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Naveen Akash | Cloud Data Engineer</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav>
         <div class="container">
-            <h1>Naveen Akash</h1>
+            <h1>Naveen Akash R</h1>
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
@@ -18,77 +19,147 @@
                 <li><a href="#certifications">Certifications</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <button id="theme-toggle"><i class="fas fa-moon"></i></button>
         </div>
     </nav>
 
     <main class="container">
+        <!-- About Section -->
         <section id="about">
-            <h2>About Me</h2>
-            <img src="assets/profile.jpg" alt="Profile" class="profile-img" />
-            <p>Cloud Data Engineer specializing in scalable data pipelines and automation. Experienced in GCP (BigQuery, Composer) and AWS (Lambda, Glue, EC2). Passionate about transforming raw data into actionable insights.</p>
+            <h2><i class="fas fa-user"></i> About Me</h2>
+            <div class="about-content">
+                <img src="assets/profile.jpg" alt="Naveen Akash" class="profile-img">
+                <div>
+                    <p>Cloud Data Engineer with 2+ years of expertise in GCP and AWS. Specialized in building scalable data pipelines, ETL processes, and cloud automation.</p>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +91 8344477797</p>
+                        <p><i class="fas fa-envelope"></i> akash3072001@gmail.com</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
+        <!-- Experience Section -->
         <section id="experience">
-            <h2>Experience</h2>
+            <h2><i class="fas fa-briefcase"></i> Experience</h2>
+            
             <div class="experience-item">
                 <h3>Cognizant Technology Solutions</h3>
-                <p><strong>Data Engineer</strong> (Sept 2023 - Present)</p>
+                <p class="role">Data Engineer (Full-time)</p>
+                <p class="date">Sept 2023 - Present</p>
+                <div class="details">
+                    <h4>Google Cloud Platform (GCP):</h4>
+                    <ul>
+                        <li>Built data pipelines using BigQuery for processing 10TB+ datasets.</li>
+                        <li>Automated workflows with Cloud Functions, reducing manual effort by 30%.</li>
+                        <li>Managed data storage in Google Cloud Storage (GCS).</li>
+                        <li>Orchestrated workflows using Cloud Composer (Apache Airflow).</li>
+                    </ul>
+                    <h4>Amazon Web Services (AWS):</h4>
+                    <ul>
+                        <li>Deployed applications on EC2 with Load Balancers and Auto Scaling.</li>
+                        <li>Implemented S3 storage solutions with lifecycle policies.</li>
+                        <li>Configured DNS and SSL using Route 53 and ACM.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <h3>Cognizant Technology Solutions</h3>
+                <p class="role">AWS Data Engineer Intern</p>
+                <p class="date">May 2023 - July 2023</p>
+                <div class="details">
+                    <ul>
+                        <li>Developed an automated ETL pipeline (S3 → Lambda → Glue → Athena) that improved processing efficiency by 40%.</li>
+                        <li>Created 5 dynamic dashboards in QuickSight for real-time analytics.</li>
+                        <li>Automated job alerts using SNS, reducing manual monitoring by 20%.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2><i class="fas fa-code"></i> Projects</h2>
+            <div class="project">
+                <h3>Automated ETL Pipeline (AWS)</h3>
                 <ul>
-                    <li>Built data pipelines using GCP BigQuery and Cloud Composer.</li>
-                    <li>Automated workflows with AWS Lambda and Glue.</li>
+                    <li>Tools: S3, Lambda, Glue, Athena, EventBridge</li>
+                    <li>Processed 5M+ records daily with 40% faster execution.</li>
+                </ul>
+            </div>
+            <div class="project">
+                <h3>GCP Data Warehouse</h3>
+                <ul>
+                    <li>Tools: BigQuery, Cloud Composer, GCS</li>
+                    <li>Centralized 15+ data sources for analytics teams.</li>
                 </ul>
             </div>
         </section>
 
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="project">
-                <h3>Automated ETL Pipeline (AWS)</h3>
-                <p>Tools: S3, Lambda, Glue, Athena | Efficiency improved by 40%.</p>
-                <a href="https://github.com/yourusername/etl-pipeline" target="_blank">View Code</a>
-            </div>
-        </section>
-
+        <!-- Skills Section -->
         <section id="skills">
-            <h2>Technical Skills</h2>
-            <div class="skills-list">
-                <span>Python</span>
-                <span>SQL</span>
-                <span>BigQuery</span>
-                <span>AWS Lambda</span>
-                <span>Apache Airflow</span>
+            <h2><i class="fas fa-cogs"></i> Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Cloud Platforms</h4>
+                    <ul>
+                        <li>Google Cloud (GCP)</li>
+                        <li>Amazon Web Services (AWS)</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Languages</h4>
+                    <ul>
+                        <li>Python</li>
+                        <li>SQL</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Tools</h4>
+                    <ul>
+                        <li>Apache Airflow</li>
+                        <li>Docker</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
+        <!-- Certifications Section -->
         <section id="certifications">
-            <h2>Certifications</h2>
-            <div class="badges">
-                <a href="https://www.credly.com" target="_blank">
-                    <img src="assets/cert_aws_cp.png" alt="AWS Cloud Practitioner" />
-                </a>
-                <a href="https://www.credly.com" target="_blank">
-                    <img src="assets/cert_aws_saa.png" alt="AWS Solutions Architect" />
-                </a>
-                <a href="https://www.credly.com" target="_blank">
-                    <img src="assets/cert_gcp_pde.png" alt="GCP Data Engineer" />
-                </a>
+            <h2><i class="fas fa-certificate"></i> Certifications</h2>
+            <div class="certs">
+                <div class="cert-item">
+                    <img src="assets/aws-saa.png" alt="AWS Solutions Architect">
+                    <p>AWS Solutions Architect Associate</p>
+                </div>
+                <div class="cert-item">
+                    <img src="assets/gcp-de.png" alt="GCP Data Engineer">
+                    <p>Google Cloud Data Engineer</p>
+                </div>
             </div>
         </section>
 
+        <!-- Contact Section -->
         <section id="contact">
-            <h2>Contact</h2>
-            <p>📧 <a href="mailto:akash3072001@gmail.com">akash3072001@gmail.com</a></p>
-            <p>🔗 <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a></p>
+            <h2><i class="fas fa-envelope"></i> Contact</h2>
+            <div class="contact-links">
+                <a href="mailto:akash3072001@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+                <a href="https://linkedin.com/in/yourprofile"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://github.com/yourusername"><i class="fab fa-github"></i> GitHub</a>
+            </div>
         </section>
 
+        <!-- Resume Download -->
         <section id="resume">
-            <h2>Resume</h2>
-            <a href="assets/resume.pdf" download class="resume-btn">Download Resume</a>
+            <a href="assets/resume.pdf" download class="resume-btn">
+                <i class="fas fa-download"></i> Download Full Resume (PDF)
+            </a>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Naveen Akash</p>
+        <p>&copy; 2025 Naveen Akash R. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
