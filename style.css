@@ -338,34 +338,38 @@ section:nth-child(7) { animation-delay: 1.2s; }
 
 /* Responsive Design */
 /* Add this to your existing mobile media query */
+/* Update your mobile media query with these changes */
 @media (max-width: 768px) {
-  /* Text shadow for better readability on mobile */
+  /* Darken the base background */
   body {
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #0f0f1f, #0d122e, #080d20) !important;
   }
-  
-  /* Stronger shadow for headings */
+
+  /* Darken glass panels with less transparency */
+  section {
+    background: rgba(15, 15, 31, 0.92) !important; /* Darker with higher opacity */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  /* Enhance text contrast */
+  body, p, li {
+    color: #ffffff !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  }
+
+  /* Make headings pop more */
   h1, h2, h3, h4 {
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    color: var(--secondary) !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
   }
-  
-  /* Special shadow for section headings */
-  section h2 {
-    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
-  }
-  
-  /* Contact links visibility */
+
+  /* Contact links contrast */
   .contact-links a {
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    background: rgba(0, 102, 255, 0.4) !important;
+    border: 1px solid var(--primary) !important;
   }
-  
-  /* Keep your existing mobile styles below */
-  nav .container {
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  /* ... rest of your existing mobile styles ... */
+
 
   
   nav ul {
