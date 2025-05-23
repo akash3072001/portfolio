@@ -1,10 +1,11 @@
-/* Modern UI with Animated Background */
+/* Modern UI with Glass Morphism Effect */
 :root {
   --primary: #0066ff;
   --secondary: #00ccff;
   --dark: #1a1a2e;
-  --light: #f0f0f0;
+  --light: #ffffff;
   --glass: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.18);
 }
 
 * {
@@ -23,7 +24,7 @@ body {
   line-height: 1.6;
 }
 
-/* Animated Gradient Background */
+/* Animated Gradient Background Layer */
 body::before {
   content: '';
   position: fixed;
@@ -53,18 +54,20 @@ body::before {
 /* Glass Morphism Sections */
 section {
   background: var(--glass);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-radius: 15px;
   padding: 30px;
   margin-bottom: 30px;
+  border: 1px solid var(--glass-border);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: all 0.3s ease;
 }
 
 section:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.15);
 }
 
 section h2 {
@@ -75,35 +78,11 @@ section h2 {
   gap: 10px;
 }
 
-/* Mobile Responsive Fixes */
-@media (max-width: 768px) {
-  body {
-    background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460) !important;
-    color: #f0f0f0 !important;
-  }
-
-  section {
-    background: rgba(255, 255, 255, 0.1) !important;
-    backdrop-filter: blur(10px) !important;
-    color: #f0f0f0 !important;
-  }
-
-  /* Ensure theme toggle works on mobile */
-  body[data-theme="light"] {
-    background: #f0f0f0 !important;
-    color: #1a1a2e !important;
-  }
-
-  body[data-theme="light"] section {
-    background: rgba(0, 0, 0, 0.05) !important;
-    color: #1a1a2e !important;
-  }
-}
-
-/* Navbar */
+/* Navigation */
 nav {
   background: rgba(26, 26, 46, 0.8);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   padding: 15px 0;
   position: fixed;
   width: 100%;
@@ -165,11 +144,11 @@ nav a:hover::after {
 
 .profile-img {
   width: 150px;
-  height: 150px;
-  border-radius: 50%;
+  height: 170px;
+  border-radius: 5%;
   object-fit: cover;
-  border: 3px solid var(--primary);
-  box-shadow: 0 0 20px rgba(0, 204, 255, 0.3);
+  /* border: 3px solid var(--primary);
+  box-shadow: 0 0 20px rgba(0, 204, 255, 0.3); */
 }
 
 .about-content {
@@ -336,21 +315,8 @@ footer {
   padding: 20px;
   margin-top: 50px;
   background: rgba(26, 26, 46, 0.8);
+  backdrop-filter: blur(10px);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* Theme Toggle Button */
-#theme-toggle {
-  background: transparent;
-  border: none;
-  color: var(--light);
-  font-size: 1.2rem;
-  cursor: pointer;
-  transition: transform 0.3s;
-}
-
-#theme-toggle:hover {
-  transform: scale(1.1);
 }
 
 /* Animations */
@@ -391,8 +357,8 @@ section:nth-child(7) { animation-delay: 1.2s; }
     margin: 0 auto;
   }
   
-  .contact-info {
-    align-items: center;
+  .contact-info p {
+    justify-content: center;
   }
   
   .contact-links {
@@ -402,5 +368,20 @@ section:nth-child(7) { animation-delay: 1.2s; }
   .certs {
     flex-direction: column;
     align-items: center;
+  }
+
+  /* Enhanced mobile glass effect */
+  section {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 20px;
+  }
+}
+
+/* Safari specific fixes */
+@supports (-webkit-touch-callout: none) {
+  section {
+    -webkit-backdrop-filter: blur(12px);
   }
 }
