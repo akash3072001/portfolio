@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Naveen Akash | Portfolio</title>
+    <title>Naveen Akash | Cloud Data Engineer</title>
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -13,9 +13,10 @@
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#certifications">Certifications</a></li>
-                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -24,44 +25,72 @@
         <section id="about">
             <h2>About Me</h2>
             <img src="assets/profile.jpg" alt="Profile" class="profile-img" />
-            <p>I am a Cloud Data Engineer with experience in building efficient data pipelines and automation using GCP and AWS tools.</p>
+            <p>Cloud Data Engineer specializing in scalable data pipelines and automation. Experienced in GCP (BigQuery, Composer) and AWS (Lambda, Glue, EC2). Passionate about transforming raw data into actionable insights.</p>
         </section>
 
         <section id="experience">
             <h2>Experience</h2>
-            <ul>
-                <li><strong>Data Engineer</strong> - Cognizant (Sept 2023 - Present)</li>
-                <li><strong>AWS Data Engineer Intern</strong> - Cognizant (May 2023 – July 2023)</li>
-            </ul>
+            <div class="experience-item">
+                <h3>Cognizant Technology Solutions</h3>
+                <p><strong>Data Engineer</strong> (Sept 2023 - Present)</p>
+                <ul>
+                    <li>Built data pipelines using GCP BigQuery and Cloud Composer.</li>
+                    <li>Automated workflows with AWS Lambda and Glue.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Automated ETL Pipeline (AWS)</h3>
+                <p>Tools: S3, Lambda, Glue, Athena | Efficiency improved by 40%.</p>
+                <a href="https://github.com/yourusername/etl-pipeline" target="_blank">View Code</a>
+            </div>
         </section>
 
         <section id="skills">
             <h2>Technical Skills</h2>
-            <p>Python, SQL, BigQuery, GCS, Cloud Composer, EC2, S3, Lambda, Glue, Athena</p>
+            <div class="skills-list">
+                <span>Python</span>
+                <span>SQL</span>
+                <span>BigQuery</span>
+                <span>AWS Lambda</span>
+                <span>Apache Airflow</span>
+            </div>
         </section>
 
         <section id="certifications">
             <h2>Certifications</h2>
             <div class="badges">
-                <img src="assets/cert_aws_cp.png" alt="AWS Cloud Practitioner" />
-                <img src="assets/cert_aws_saa.png" alt="AWS Solutions Architect" />
-                <img src="assets/cert_gcp_pde.png" alt="GCP Data Engineer" />
+                <a href="https://www.credly.com" target="_blank">
+                    <img src="assets/cert_aws_cp.png" alt="AWS Cloud Practitioner" />
+                </a>
+                <a href="https://www.credly.com" target="_blank">
+                    <img src="assets/cert_aws_saa.png" alt="AWS Solutions Architect" />
+                </a>
+                <a href="https://www.credly.com" target="_blank">
+                    <img src="assets/cert_gcp_pde.png" alt="GCP Data Engineer" />
+                </a>
             </div>
         </section>
 
-        <section id="education">
-            <h2>Education</h2>
-            <p>B.Tech in IT, PSNA College of Engineering and Technology (CGPA: 8.72)</p>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>📧 <a href="mailto:akash3072001@gmail.com">akash3072001@gmail.com</a></p>
+            <p>🔗 <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a></p>
         </section>
 
-        <section>
+        <section id="resume">
             <h2>Resume</h2>
-            <a href="assets/resume.pdf" download>Download Resume</a>
+            <a href="assets/resume.pdf" download class="resume-btn">Download Resume</a>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2025 Naveen Akash</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
