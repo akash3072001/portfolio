@@ -75,6 +75,31 @@ section h2 {
   gap: 10px;
 }
 
+/* Mobile Responsive Fixes */
+@media (max-width: 768px) {
+  body {
+    background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460) !important;
+    color: #f0f0f0 !important;
+  }
+
+  section {
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(10px) !important;
+    color: #f0f0f0 !important;
+  }
+
+  /* Ensure theme toggle works on mobile */
+  body[data-theme="light"] {
+    background: #f0f0f0 !important;
+    color: #1a1a2e !important;
+  }
+
+  body[data-theme="light"] section {
+    background: rgba(0, 0, 0, 0.05) !important;
+    color: #1a1a2e !important;
+  }
+}
+
 /* Navbar */
 nav {
   background: rgba(26, 26, 46, 0.8);
